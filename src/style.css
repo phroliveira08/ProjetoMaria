@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#51ABFF, white);
+}
+.content {
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    height: 70vh;
+}
+.title {
+    font-family: 'Oxanium', cursive;
+    font-size: 48px;
+    color: white;
+    margin: 1em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.603);
+}
+.device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.titleDevice {
+    font-family: 'Oxanium', cursive;
+    font-size: 24px;
+}
+
+.iconDevice{
+    margin: 15px;
+    height: 115px;
+    width: 115px;
+}
+
+.buttonDevice{
+    margin: 5px;
+    padding: 4px;
+    font-family: 'Oxanium', cursive;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.buttonDevice:hover{
+    background-color: #51ABFF;
+    font-size: 16px;
+}
+
+.settingsDevice{
+    margin: 25px;
+    height: 45px;
+    width: 45px;
+}
+.settingsDevice:hover{
+    height: 50px;
+    width: 50px;
+}
