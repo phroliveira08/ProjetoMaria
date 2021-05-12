@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LampConfig from './components/configs/LampConfig';
 import LampDevice from './components/devices/LampDevice'
 import './style.css';
 
@@ -7,7 +8,14 @@ class App extends Component {
     lampDevices: [
       { id: 1, status: 'on' },
       { id: 2, status: 'off' }
-    ]
+    ],
+    config: {
+      open: true,
+      data: {
+        id: 1,
+        name: 'Lâmpada 1'
+      }
+    }
   }
 
   turnOn = async (id) => {
@@ -61,6 +69,9 @@ class App extends Component {
         <div className='content'>
           <LampDevice id={this.state.lampDevices[0].id} status={this.state.lampDevices[0].status} onClickButton={this.turn} />
           <LampDevice id={this.state.lampDevices[1].id} status={this.state.lampDevices[1].status} onClickButton={this.turn} />
+          { this.state.config.open &&
+            <LampConfig deviceName={this.state.config.data.name} deviceId={this.state.config.data.id}/>
+          }
         </div>
       </div>
     );

@@ -9,10 +9,10 @@ const LampDevice = (props) => {
          : <img className='iconDevice' src='/iconLampOff.png'></img>       
         }
         {props.status == 'on' 
-         ? <button className='buttonDevice' onClick={() => onClickButton({command: 'off', device: props.id})}>Desligar</button>
-         : <button className='buttonDevice' onClick={() => onClickButton({command: 'on', device: props.id})}>Ligar</button>      
+         ? <div className='buttonDiv'><button className='buttonDevice' onClick={() => onClickButton({command: 'off', device: props.id})}>Desligar</button></div>
+         : <div className='buttonDiv'><button className='buttonDevice' onClick={() => onClickButton({command: 'on', device: props.id})}>Ligar</button></div>      
         }
-        <img className='settingsDevice' src='/settings.svg'></img>
+        <div className='buttonDiv'><button className='buttonSettingDevice'><img src='/settings.svg'/></button></div>
       </div>
     )
 }
