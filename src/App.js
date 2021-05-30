@@ -6,20 +6,21 @@ import './style.css';
 class App extends Component {
   state = {
     lampDevices: [
-      { id: 1, status: 'on' },
+      { id: 1, status: 'off' },
       { id: 2, status: 'off' }
     ],
     config: {
       open: true,
-      data: {
-        id: 1,
-        name: 'Lâmpada 1'
-      }
     }
   }
 
+  openWindow = () => {
+    const configWindow = document.getElementsByClassName('deviceConfig')[0]
+    configWindow.style.display = 'flex'
+  }
+
   turnOn = async (id) => {
-    const response = await fetch('/turn-on');
+    const response = await fetch(`/turn-on${id}`);
     const data = await response.json();
     this.setState(state => {
       const lampDevices = state.lampDevices.map(item => {
@@ -33,7 +34,7 @@ class App extends Component {
   }
 
   turnOff = async (id) => {
-    const response = await fetch('/turn-off');
+    const response = await fetch(`/turn-off${id}`);
     const data = await response.json();
     this.setState(state => {
       const lampDevices = state.lampDevices.map(item => {
@@ -48,7 +49,7 @@ class App extends Component {
   }
 
   turn = async (data) => {
-    switch(data.command){
+    switch (data.command) {
       case 'on':
         console.log(data.command + 'ligando')
         this.turnOn(data.device)
@@ -65,12 +66,17 @@ class App extends Component {
   render() {
     return (
       <div className='main'>
-        <h1 className='title'>PROJETOMARIA</h1>
+        <div className='header'>
+          <h1 className='title'>PROJETOMARIA</h1>
+          <button className='buttonSettingDevice' onClick={() => { this.openWindow() }}>
+            <img src='/settings.svg' />
+          </button>
+        </div>
         <div className='content'>
           <LampDevice id={this.state.lampDevices[0].id} status={this.state.lampDevices[0].status} onClickButton={this.turn} />
           <LampDevice id={this.state.lampDevices[1].id} status={this.state.lampDevices[1].status} onClickButton={this.turn} />
-          { this.state.config.open &&
-            <LampConfig deviceName={this.state.config.data.name} deviceId={this.state.config.data.id}/>
+          {this.state.config.open &&
+            <LampConfig />
           }
         </div>
       </div>

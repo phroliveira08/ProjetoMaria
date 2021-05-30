@@ -10,6 +10,12 @@
     height: 100vh;
     background-image: linear-gradient(#51ABFF, white);
 }
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -26,6 +32,7 @@
 .device {
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
     align-items: center;
     width: 50%;
 }
@@ -46,15 +53,6 @@
     width: 115px;
 }
 
-.buttonDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10%;
-    width: 100%;
-    margin: 1em;
-}
-
 .buttonDevice{
     margin: 5px;
     padding: 4px;
@@ -67,6 +65,7 @@
 .buttonDevice:hover{
     background-color: #51ABFF;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .buttonSettingDevice{
@@ -89,7 +88,7 @@
     align-items: center;
     flex-direction: column;
     z-index: 5;
-    padding: 5px;
+    padding: 10px;
     width: 20vw;
     height: 30vh;
     border: 2px solid black;
@@ -102,12 +101,11 @@
     padding: 3px;
     font-family: 'Oxanium', cursive;
     background-color: transparent;
-    border: 1px solid black;
-    border-radius: 6px;
-    font-size: 14px;
+    border: none;
+    font-size: 16px;
 }
 .buttonCloseConfig:hover{
-    background-color: #51ABFF;
+    font-weight: bold;
 }
 
 .menuMethod {
