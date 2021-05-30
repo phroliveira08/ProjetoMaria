@@ -10,6 +10,12 @@
     height: 100vh;
     background-image: linear-gradient(#51ABFF, white);
 }
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -26,6 +32,7 @@
 .device {
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
     align-items: center;
     width: 50%;
 }
@@ -33,6 +40,11 @@
 .titleDevice {
     font-family: 'Oxanium', cursive;
     font-size: 24px;
+}
+
+.textDevice {
+    font-family: 'Oxanium', cursive;
+    font-size: 18px;
 }
 
 .iconDevice{
@@ -53,14 +65,64 @@
 .buttonDevice:hover{
     background-color: #51ABFF;
     font-size: 16px;
+    font-weight: bold;
 }
 
-.settingsDevice{
-    margin: 25px;
+.buttonSettingDevice{
+    margin: 5px;
+    padding: 4px;
     height: 45px;
     width: 45px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
 }
-.settingsDevice:hover{
+.buttonSettingDevice:hover{
     height: 50px;
     width: 50px;
+}
+
+.deviceConfig {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    padding: 10px;
+    width: 20vw;
+    height: 30vh;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.buttonCloseConfig{
+    align-self: flex-end;
+    margin: 5px;
+    padding: 3px;
+    font-family: 'Oxanium', cursive;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+.buttonCloseConfig:hover{
+    font-weight: bold;
+}
+
+.menuMethod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.selectMethod {
+    font-family: 'Oxanium', cursive;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    height: 25%;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.603)
 }
