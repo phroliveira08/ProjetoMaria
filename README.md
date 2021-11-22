@@ -1,4 +1,4 @@
-# Projeto Maria
-Como descrito anteriormente a funcionalidade será controlar dispositivos IOT. Com o decorrer do projeto eu irei informar as funcionalidades que forem adicionadas. No início o objetivo é controlar duas lâmpadas e ter como configurar a intensidade das luzes.
+# app-controller-lights-poc
 
-Observação: Este código precisa de muitas melhorias.
+The proposal of this POC is to control room lights from a website.
+
